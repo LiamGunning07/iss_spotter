@@ -22,7 +22,7 @@ const fetchCoordsByIP = function(ip, callback) {
       callback(Error(`Status Code ${response.statusCode} when fetching IP: ${body}`), null);
       return;
     }
-
+    
     const data = JSON.parse(body);
     const coords = {
       latitude: data.latitude,
